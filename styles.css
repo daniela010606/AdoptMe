@@ -1,0 +1,535 @@
+
+/* ---------------- reset ---------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ---------------- color palette ---------------- */
+
+:root {
+    --blue-light: #86E1FF;
+    --lavender: #C2C5FA;
+    --purple-light: #E1DAF7;
+    --pink-light: #FFE3F6;
+    --purple: #D0A9FE;
+    --blue: #86C1FC;
+    --pink: #EBAFF2;
+    --sky-blue: #B1E1FF;
+
+    --text-color: #242238;
+    --link-color: #5B3A78;
+    --link-hover: #3B2855;
+    --white: #FFFFFF;
+}
+
+/* ---------------- body ---------------- */
+
+body {
+    font-family: "Cambay", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink-light),
+            var(--purple-light),
+            var(--sky-blue)
+        );
+
+    min-height: 100vh;
+}
+
+/* ---------------- header ---------------- */
+
+header {
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--lavender),
+            var(--pink-light),
+            var(--blue-light)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(57, 55, 90, 0.12);
+}
+
+/* ---------------- title ---------------- */
+
+header h1 {
+    font-family: "Delius Unicase", cursive;
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--text-color);
+}
+
+header p {
+    max-width: 650px;
+    margin: 0.75rem auto 0;
+    font-size: 1.1rem;
+}
+
+/* ---------------- headings ---------------- */
+
+h2,
+h3 {
+    font-family: "Cambay", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+/* ---------------- nav ---------------- */
+
+nav {
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.88);
+
+    box-shadow:
+        0 5px 20px rgba(57, 55, 90, 0.12);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+/* ---------------- nav links ---------------- */
+
+nav a {
+    display: inline-block;
+    padding: 0.55rem 0.9rem;
+    color: var(--link-color);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+/* ---------------- nav hover ---------------- */
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--link-hover);
+    background-color: var(--purple);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(74, 65, 110, 0.18);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--link-hover);
+    outline-offset: 3px;
+}
+
+/* ---------------- current page ---------------- */
+
+nav a[aria-current="page"] {
+    background-color: var(--purple-light);
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* ---------------- links ---------------- */
+
+main a {
+    color: var(--link-color);
+    font-weight: 700;
+}
+
+main a:hover,
+main a:focus-visible {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+main a:focus-visible {
+    outline: 3px solid var(--link-hover);
+    outline-offset: 3px;
+}
+
+/* ---------------- main content ---------------- */
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ---------------- sections ---------------- */
+
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+
+    box-shadow:
+        0 10px 30px rgba(57, 55, 90, 0.12);
+}
+
+/* ---------------- paragraphs ---------------- */
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* ---------------- lists ---------------- */
+
+main ul,
+main ol {
+    padding-left: 1.5rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------- cats ---------------- */
+
+.cat-card {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--sky-blue),
+            var(--purple-light),
+            var(--pink-light)
+        );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 22px rgba(57, 55, 90, 0.12);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(57, 55, 90, 0.18);
+}
+
+/* ---------------- cat images ---------------- */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(57, 55, 90, 0.16);
+}
+
+/* ---------------- gallery ---------------- */
+
+.cat-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.cat-gallery article {
+    min-width: 0;
+    padding: 1.5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--sky-blue),
+            var(--purple-light),
+            var(--pink-light)
+        );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 22px rgba(57, 55, 90, 0.12);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.cat-gallery article:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(57, 55, 90, 0.18);
+}
+
+.cat-gallery h3 {
+    margin-top: 0;
+}
+
+.cat-gallery img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* ---------------- buttons ---------------- */
+
+button,
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.4rem;
+
+    font-family: "Cambay", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: var(--text-color);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--pink)
+        );
+
+    border: none;
+    border-radius: 999px;
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(57, 55, 90, 0.15);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+button:hover,
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 22px rgba(57, 55, 90, 0.22);
+}
+
+button:focus-visible,
+.button:focus-visible {
+    outline: 3px solid var(--link-hover);
+    outline-offset: 3px;
+}
+
+/* ---------------- contact form ---------------- */
+
+form {
+    max-width: 650px;
+    margin: 2rem auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------- form inputs ---------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+
+    font-family: "Cambay", sans-serif;
+    font-size: 1rem;
+
+    color: var(--text-color);
+    background-color: var(--white);
+
+    border: 2px solid var(--link-color);
+    border-radius: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ---------------- fieldset ---------------- */
+
+fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+
+    border: 2px solid var(--link-color);
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: 700;
+}
+
+fieldset label {
+    margin-left: 0.5rem;
+}
+
+fieldset div {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------- checkbox and radio ---------------- */
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--link-color);
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* ---------------- form focus ---------------- */
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--link-hover);
+    outline-offset: 3px;
+}
+
+/* ---------------- form validation ---------------- */
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #A12D55;
+}
+
+/* ---------------- footer ---------------- */
+
+footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--lavender),
+            var(--blue-light)
+        );
+
+    box-shadow:
+        0 -6px 20px rgba(57, 55, 90, 0.10);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---------------- tablet screens ---------------- */
+
+@media (min-width: 601px) {
+
+    header {
+        padding: 4rem 2rem 3rem;
+    }
+
+    header h1 {
+        font-size: 3.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    main {
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    nav ul {
+        gap: 0.75rem;
+    }
+
+    nav a {
+        padding: 0.65rem 1.25rem;
+    }
+}
+
+/* ---------------- for larger screens ---------------- */
+
+@media (min-width: 768px) {
+
+    .cat-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cat-gallery article {
+        padding: 2rem;
+    }
+}
+
+/* ---------------- reduced motion ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    nav a,
+    button,
+    .button,
+    .cat-card,
+    .cat-gallery article {
+        transition: none;
+    }
+}
