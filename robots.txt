@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://daniela010606.github.io/AdoptMe/sitemap.xml
